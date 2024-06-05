@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <style>
+  </style>
+<script defer src="main.js"></script></head>
+<body>
+    <header>
+        Weather App
+    </header>
+    <main>
+        <form novalidate id="weather-form" class="form-wrapper">
+            <div class="form-row">
+              <input
+                type="text"
+                id="city"
+                class="form-control"
+                placeholder="City"
+                minlength="3"
+                maxlength="25"
+                pattern="^[a-zA-Z\u00C0-\u017F\s'\-]+$"
+                required
+                autofocus
+              />
+              <label for="city" class="form-label">City</label>
+              <span class="error" aria-live="polite"></span>
+            </div>  
+            <button type="submit" id="submit-btn" class="btn-submit">Send</button>
+          </form>
+    </main>
+    <div class="temperature section">
+        <img src="#" alt="Weather condition icon" class="weather-main-icon" id="icon"/>
+        <h1 id="temperature-f">Fahrenheit</h1>
+        <h2 id="min-temperature">Min temperature:</h2>
+        <h3 id="max-temperature">Max temperature:</h3>
+    </div>
+    <div class="first_column">
+        <img src="#" class="water"/>
+        <h3>Precipitation Levels</h3>
+        <p id="precipitation-levels"></p>
+        <img src="#" class="sun"/>
+        <h3>UV Index</h3>
+        <p id="uv-index"></p>
+    </div>
+    <div class="second_column">
+        <img src="#" class="wind"/>
+        <h3>Wind Levels</h3>
+        <p id="wind-levels"></p>
+        <img src="" class="pressure"/>
+        <h3>Pressure Levels</h3>
+        <p id="pressure-levels"></p>
+    </div>
+</body>
+</html>
